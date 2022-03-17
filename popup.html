@@ -4,11 +4,48 @@
     <link rel="stylesheet" href="button.css">
   </head>
   <body>
-    <div>
-      <label for="netflix">Skip Netflix Intro<input type="checkbox" name="netflix" id="netflix_skip_enabled"></input></label>
-      <label for="primevideo">Skip PrimeVideo Intro<input type="checkbox" name="primevideo" id="primevideo_skip_enabled"></input></label>
-    </div>
-    
+   <div id="background">
+      <div>
+        <p class="service"><strong>Netflix</strong></p><br>
+       <p>Skip Intro</p>
+         <label class="switch">
+          <input type="checkbox" name="netflix" id="netflix_skip_enabled"></input>
+          <span class="slider netflix"></span>
+         </label><br>
+         <p>Skip Next Episode</p>
+         <label class="switch">
+          <input type="checkbox" name="netflix" id="netflix_skip_enabled"></input>
+          <span class="slider netflix"></span>
+         </label>
+         <p>Skip Recap</p>
+         <label class="switch">
+          <input type="checkbox" name="netflix" id="netflix_skip_enabled"></input>
+          <span class="slider netflix"></span>
+         </label>
+      </div>
+      <hr>
+     <div>
+       <p class="service"><strong>Prime Video</strong></p><br>
+       <p>Skip Intro</p>
+        <label class="switch">
+          <input type="checkbox" name="primevideo" id="primevideo_skip_enabled"></input>
+          <span class="slider primevideo"></span>
+        </label><br>
+        <p>Skip Next Episode</p>
+        <label class="switch">
+          <input type="checkbox" name="primevideo" id="primevideo_skip_enabled"></input>
+          <span class="slider primevideo"></span>
+        </label>
+        <br>
+        <p>Skip Ad</p>
+        <label class="switch">
+          <input type="checkbox" name="primevideo" id="primevideo_skip_enabled"></input>
+          <span class="slider primevideo"></span>
+        </label>
+     <hr>
+     <p class="version">v. 0.0.1</p>
+      </div>
+   </div>
     <script src="popup.js"></script>
   </body>
 </html>

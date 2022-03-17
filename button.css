@@ -1,9 +1,88 @@
-label{
-background-color: green;
-margin: 10px;
-color: white;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-width: 100px;
+body {
+    background-color: rgb(32,33,36); 
+}
+
+p {
+    color:white;
+    display:inline-block;
+    font-size:14px;
+}
+hr {
+    border: 1px solid rgb(48,52,67);
+}
+p.service {
+    color: white;
+    font-size: 15px;
+}
+div#background {
+    width:180px;
+}
+.switch {
+    position: relative;
+    float: right;
+    width: 50px;
+    height: 22px;
+    top: 1px;
+    margin-block-start: 1em;
+}
+.switch input { 
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(53,54,58);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .primevideo{
+  background-color: #0f79af;
+}
+
+input:focus + .primevideo {
+  box-shadow: 0 0 1px #0f79af;
+}
+
+input:checked + .netflix{
+    background-color: #E50914;
+  }
+  
+  input:focus + .netflix {
+    box-shadow: 0 0 1px #E50914;
+  }
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
+}
+
+p.version {
+    font-size: 12px;
+    margin-bottom: 2px;
+    margin-top: -5px;
+    float: right;
+    color: rgb(122,130,160);
 }
