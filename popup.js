@@ -1,22 +1,25 @@
-let netflix_skip_enabled_checkbox = document.getElementById("netflix_skip_enabled")
+import { netflix_skippers, primevideo_skippers } from './config.js'
+const manifestData = chrome.runtime.getManifest()
+let version_span = document.getElementById('version')
+version_span.innerText = manifestData.version
 
-chrome.storage.local.get('netflix_skip_enabled', (result) => {
-  netflix_skip_enabled_checkbox.checked = result.netflix_skip_enabled
-});
+let checkboxes_id_list = netflix_skippers.concat(primevideo_skippers).map(item => {
+  return {
+    id: item.name,
+    element: null
+  }
+})
 
-netflix_skip_enabled_checkbox.addEventListener("change", (event) => {
-  chrome.storage.local.set({ netflix_skip_enabled: event.currentTarget.checked })
-});
+for (let i = 0; i < checkboxes_id_list.length; i++) {
 
-let primevideo_skip_enabled_checkbox = document.getElementById("primevideo_skip_enabled")
+  checkboxes_id_list[i].element = document.getElementById(checkboxes_id_list[i].id)
 
-chrome.storage.local.get('primevideo_skip_enabled', (result) => {
-  primevideo_skip_enabled_checkbox.checked = result.primevideo_skip_enabled
-});
+  chrome.storage.local.get(checkboxes_id_list[i].id, (result) => {
+    checkboxes_id_list[i].element.checked = result[checkboxes_id_list[i].id]
+  });
 
-primevideo_skip_enabled_checkbox.addEventListener("change", (event) => {
-  chrome.storage.local.set({ primevideo_skip_enabled: event.currentTarget.checked })
-});
+  checkboxes_id_list[i].element.addEventListener("change", (event) => {
+    chrome.storage.local.set({ [checkboxes_id_list[i].id]: event.currentTarget.checked })
+  });
 
-var manifestData = chrome.runtime.getManifest()
-console.log(manifestData.version)
+}

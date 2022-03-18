@@ -1,10 +1,11 @@
 {
   "name": "Netflix-Prime Skipper",
   "description": "Build an Extension!",
-  "version": "1.0",
+  "version": "0.0.1",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "permissions": ["storage", "activeTab", "scripting"],
   "action": {

@@ -9,43 +9,43 @@
         <p class="service"><strong>Netflix</strong></p><br>
        <p>Skip Intro</p>
          <label class="switch">
-          <input type="checkbox" name="netflix" id="netflix_skip_enabled"></input>
+          <input type="checkbox" name="netflix" id="netflix_skip_intro"></input>
           <span class="slider netflix"></span>
          </label><br>
-         <p>Skip Next Episode</p>
-         <label class="switch">
-          <input type="checkbox" name="netflix" id="netflix_skip_enabled"></input>
-          <span class="slider netflix"></span>
-         </label>
          <p>Skip Recap</p>
          <label class="switch">
-          <input type="checkbox" name="netflix" id="netflix_skip_enabled"></input>
+          <input type="checkbox" name="netflix" id="netflix_skip_recap"></input>
+          <span class="slider netflix"></span>
+         </label>
+         <p>Skip Next Episode</p>
+         <label class="switch">
+          <input type="checkbox" name="netflix" id="netflix_skip_next_episode"></input>
           <span class="slider netflix"></span>
          </label>
       </div>
       <hr>
      <div>
        <p class="service"><strong>Prime Video</strong></p><br>
-       <p>Skip Intro</p>
+       <p>Skip Intro & Recap</p>
         <label class="switch">
-          <input type="checkbox" name="primevideo" id="primevideo_skip_enabled"></input>
+          <input type="checkbox" name="primevideo" id="primevideo_skip_intro_&_recap"></input>
           <span class="slider primevideo"></span>
         </label><br>
         <p>Skip Next Episode</p>
         <label class="switch">
-          <input type="checkbox" name="primevideo" id="primevideo_skip_enabled"></input>
+          <input type="checkbox" name="primevideo" id="primevideo_skip_next_episode" disabled></input>
           <span class="slider primevideo"></span>
         </label>
         <br>
         <p>Skip Ad</p>
         <label class="switch">
-          <input type="checkbox" name="primevideo" id="primevideo_skip_enabled"></input>
+          <input type="checkbox" name="primevideo" id="primevideo_skip_ad" disabled></input>
           <span class="slider primevideo"></span>
         </label>
      <hr>
-     <p class="version">v. 0.0.1</p>
+     <p class="version">v. <span id="version"></span></p>
       </div>
    </div>
-    <script src="popup.js"></script>
+    <script type="module" src="popup.js"></script>
   </body>
 </html>

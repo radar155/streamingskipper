@@ -1,11 +1,14 @@
-const NETFLIX_SKIP_DEFAULT = true
-const PRIMEVIDEO_SKIP_DEFAULT = true
+import { netflix_skippers, primevideo_skippers } from './config.js'
+const skippers = netflix_skippers.concat(primevideo_skippers)
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.local.set({ netflix_skip_enabled: NETFLIX_SKIP_DEFAULT })
-  console.log(`Default setting netflix_skip_enabled: ${NETFLIX_SKIP_DEFAULT}`)
-  chrome.storage.local.set({ primevideo_skip_enabled: PRIMEVIDEO_SKIP_DEFAULT })
-  console.log(`Default setting primevideo_skip_enabled: ${PRIMEVIDEO_SKIP_DEFAULT}`)
+chrome.runtime.onInstalled.addListener(async () => {
+
+  for (let i = 0; i < skippers.length; i++) { 
+    let result = await chrome.storage.local.get(skippers[i].name)
+      //if (result[skippers[i].name] === undefined) uncomment to preserve old saved configuration when installing or updating
+        await chrome.storage.local.set({ [skippers[i].name]: true })
+  }
+
 });
 
 
