@@ -4,64 +4,60 @@
     <link rel="stylesheet" href="button.css">
   </head>
   <body>
-   <div id="background">
-      <d-iv>
-        <p class="service"><strong>Netflix</strong></p><br>
-       <p>Skip Intro</p>
-         <label class="switch">
-          <input type="checkbox" name="netflix" id="netflix_skip_intro"></input>
-          <span class="slider netflix"></span>
-         </label><br>
-         <p>Skip Recap</p>
-         <label class="switch">
-          <input type="checkbox" name="netflix" id="netflix_skip_recap"></input>
-          <span class="slider netflix"></span>
-         </label>
-         <p>Skip To Next Episode</p>
-         <p class="info">
-           <strong><sup>?
-          </sup></strong>
-            <span class="tooltiptext">
-              by default Netflix already jump to the next episode after a countdown, 
-              this option allow you to jump to the next episode without waiting
-            </span>
-          </p>
-         <label class="switch nextnet">
-          <input type="checkbox" name="netflix" id="netflix_skip_next_episode"></input>
-          <span class="slider netflix"></span>
-         </label>
-      </div>
+    <div id="background">
+      <p class="service"><strong>Netflix</strong></p><br>
+      <p>Skip Intro</p>
+      <label class="switch">
+        <input type="checkbox" name="netflix" id="netflix_skip_intro"></input>
+        <span class="slider netflix"></span>
+      </label><br>
+      <p>Skip Recap</p>
+      <label class="switch">
+        <input type="checkbox" name="netflix" id="netflix_skip_recap"></input>
+        <span class="slider netflix"></span>
+      </label>
+      <p>Skip To Next Episode</p>
+      <p class="info">
+        <strong><sup>?
+        </sup></strong>
+        <span class="tooltiptext">
+          by default Netflix already jump to the next episode after a countdown, 
+          this option allow you to jump to the next episode without waiting
+        </span>
+      </p>
+      <label class="switch nextnet">
+        <input type="checkbox" name="netflix" id="netflix_skip_next_episode"></input>
+        <span class="slider netflix"></span>
+      </label>
       <hr>
-     <div>
-       <p class="service"><strong>Prime Video</strong></p><br>
-       <p>Skip Intro & Recap</p>
-        <label class="switch">
-          <input type="checkbox" name="primevideo" id="primevideo_skip_intro_&_recap"></input>
-          <span class="slider primevideo"></span>
-        </label><br>
-        <p>Skip To Next Episode</p>
-        <p class="info">
-          <strong><sup>?
-         </sup></strong>
-           <span class="tooltiptext tprime">
-             by default Netflix already jump to the next episode after a countdown, 
-             this option allow you to jump to the next episode without waiting
-           </span>
-         </p>
-        <label class="switch nextpri">
-          <input type="checkbox" name="primevideo" id="primevideo_skip_next_episode"></input>
-          <span class="slider primevideo"></span>
-        </label>
-        <br>
-        <p>Skip Ad</p>
-        <label class="switch">
-          <input type="checkbox" name="primevideo" id="primevideo_skip_ad" disabled></input>
-          <span class="slider primevideo"></span>
-        </label>
+      <p class="service"><strong>Prime Video</strong></p><br>
+      <p>Skip Intro & Recap</p>
+      <label class="switch">
+        <input type="checkbox" name="primevideo" id="primevideo_skip_intro_&_recap"></input>
+        <span class="slider primevideo"></span>
+      </label><br>
+      <p>Skip To Next Episode</p>
+      <p class="info">
+        <strong><sup>?
+        </sup></strong>
+        <span class="tooltiptext tprime">
+          by default Prime Video already jump to the next episode after a countdown, 
+          this option allow you to jump to the next episode without waiting
+        </span>
+      </p>
+      <label class="switch nextpri">
+        <input type="checkbox" name="primevideo" id="primevideo_skip_next_episode"></input>
+        <span class="slider primevideo"></span>
+      </label>
+      <br>
+      <p>Skip Ad</p>
+      <label class="switch">
+        <input type="checkbox" name="primevideo" id="primevideo_skip_ad" disabled></input>
+        <span class="slider primevideo"></span>
+      </label>
      <hr>
      <p class="version">v. <span id="version"></span></p>
-      </div>
-   </div>
+    </div>
     <script type="module" src="popup.js"></script>
   </body>
 </html>
