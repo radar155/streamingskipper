@@ -1,9 +1,9 @@
-import { netflix_skippers, primevideo_skippers } from './config.js'
+import { skippers } from '../config.js'
 const manifestData = chrome.runtime.getManifest()
 let version_span = document.getElementById('version')
 version_span.innerText = manifestData.version
 
-let checkboxes_id_list = netflix_skippers.concat(primevideo_skippers).map(item => {
+let checkboxes_id_list = skippers.map(item => {
   return {
     id: item.name,
     element: null

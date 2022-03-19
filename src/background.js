@@ -1,5 +1,4 @@
-import { netflix_skippers, primevideo_skippers } from './config.js'
-const skippers = netflix_skippers.concat(primevideo_skippers)
+import { skippers } from './config.js'
 
 chrome.runtime.onInstalled.addListener(async () => {
 
