@@ -33,7 +33,6 @@ hr {
     margin-block-start: 1em;
 }
 .tooltiptext {
-  visibility: hidden;
   display: none;
   width: 120px;
   background-color: rgb(53,54,58);
@@ -49,7 +48,6 @@ hr {
 }
 
 .info:hover .tooltiptext {
-  visibility: visible;
   display: block;
   opacity: 1;
 }

@@ -74,11 +74,11 @@ export const skippers = [
         name: 'primevideo_skip_next_episode',
         selectors: ['.atvwebplayersdk-nextupcard-button']
     },
-    /*{
+    {
         platform: 'PRIMEVIDEO',
         name: 'primevideo_skip_ad',
-        selectors: []
-    }*/
+        selectors: ['fu4rd6c', /*f1cw2swo */]
+    },
     {
         platform: 'DISNEYPLUS',
         name: 'disneyplus_skip_intro_&_recap',
