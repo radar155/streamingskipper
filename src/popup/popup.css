@@ -105,11 +105,11 @@ input:focus + .primevideo {
 }
 
 input:checked + .disneyplus{
-  background-color: #0f79af;
+  background-color: #113CCF;
 }
 
 input:focus + .disneyplus {
-  box-shadow: 0 0 1px #0f79af;
+  box-shadow: 0 0 1px #113CCF;
 }
 
 input:checked + .netflix{
