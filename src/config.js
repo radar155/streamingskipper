@@ -77,7 +77,7 @@ export const skippers = [
     {
         platform: 'PRIMEVIDEO',
         name: 'primevideo_skip_ad',
-        selectors: ['fu4rd6c', /*f1cw2swo */]
+        selectors: ['.fu4rd6c', /*f1cw2swo */]
     },
     {
         platform: 'DISNEYPLUS',
