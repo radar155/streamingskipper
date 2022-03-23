@@ -1,13 +1,13 @@
 {
   "name": "Netflix-Prime Skipper",
-  "description": "Build an Extension!",
+  "description": "Easily configurable auto skip intro, recap, ads on video streaming services. Supports Netflix, PrimeVideo, Disney+.",
   "version": "0.0.1",
   "manifest_version": 3,
   "background": {
     "service_worker": "src/background.js",
     "type": "module"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage"],
   "action": {
     "default_popup": "src/popup/popup.html",
     "default_icon": {
