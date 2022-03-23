@@ -11,17 +11,17 @@
   "action": {
     "default_popup": "src/popup/popup.html",
     "default_icon": {
-      "16": "src/icons/get_started16.png",
-      "32": "src/icons/get_started32.png",
-      "48": "src/icons/get_started48.png",
-      "128": "src/icons/get_started128.png"
+      "16": "src/icons/16x16.png",
+      "32": "src/icons/32x32.png",
+      "48": "src/icons/48x48.png",
+      "128": "src/icons/128x128.png"
     }
   },
   "icons": {
-    "16": "src/icons/get_started16.png",
-    "32": "src/icons/get_started32.png",
-    "48": "src/icons/get_started48.png",
-    "128": "src/icons/get_started128.png"
+    "16": "src/icons/16x16.png",
+    "32": "src/icons/32x32.png",
+    "48": "src/icons/48x48.png",
+    "128": "src/icons/128x128.png"
   },
   "content_scripts": [
     {
