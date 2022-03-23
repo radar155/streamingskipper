@@ -95,6 +95,7 @@ input:checked + .slider:before {
   margin-left:4px;
   font-size: 11px;
 }
+
 .version {
   font-size: 12px;
   margin-bottom: 2px;
