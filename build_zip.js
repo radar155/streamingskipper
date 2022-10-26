@@ -1,7 +1,21 @@
 const fs = require('fs');
 const archiver = require('archiver');
+const output_path = __dirname + '/bundle.zip'
 
-const output = fs.createWriteStream(__dirname + '/bundle.zip');
+try {
+  fs.unlinkSync(output_path)
+} catch (e) {
+  if (e.code === 'EBUSY') {
+    console.error('ERROR: bundle.zip file is used by another application. Please, close it and try again.')
+    process.exit(1)
+  }
+  else if (e.code !== 'ENOENT') {
+    console.error(e)
+    process.exit(1)
+  }
+}
+
+const output = fs.createWriteStream(output_path);
 const archive = archiver('zip', {
   zlib: { level: 9 } // Sets the compression level.
 });
@@ -33,8 +47,11 @@ archive.pipe(output);
 
 archive.file('manifest.json', { name: 'manifest.json' })
 
-archive.directory('src/', 'src')
+archive.directory('src/icons', 'src/icons')
+archive.directory('src/popup', 'src/popup')
+archive.file('src/background.js', { name: 'src/background.js' })
+archive.file('src/config.js', { name: 'src/config.js' })
 
-archive.directory('dist/', 'dist')
+archive.file('dist/skipper.js', { name: 'src/content_scripts/skipper.js' })
 
 archive.finalize();

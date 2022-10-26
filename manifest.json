@@ -7,6 +7,7 @@
     "service_worker": "src/background.js",
     "type": "module"
   },
+  "minimum_chrome_version": "92",
   "permissions": ["storage"],
   "action": {
     "default_popup": "src/popup/popup.html",
@@ -25,18 +26,8 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.netflix.com/*"],
-      "js": ["dist/netflix_skipper.js"],
-      "run_at": "document_end"
-    },
-    {
-      "matches": ["https://www.primevideo.com/*"],
-      "js": ["dist/primevideo_skipper.js"],
-      "run_at": "document_end"
-    },
-    {
-      "matches": ["https://www.disneyplus.com/*"],
-      "js": ["dist/disneyplus_skipper.js"],
+      "matches": ["https://www.netflix.com/*", "https://www.primevideo.com/*", "https://www.disneyplus.com/*"],
+      "js": ["src/content_scripts/skipper.js"],
       "run_at": "document_end"
     }
   ]
