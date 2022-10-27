@@ -2,7 +2,6 @@
   "name": "Streaming Skipper",
   "description": "Easily configurable auto skip intro, recap, ads on video streaming services. Supports Netflix, PrimeVideo, Disney+.",
   "version": "0.0.1",
-  "default_locale": "en",
   "homepage_url": "https://github.com/radar155/streamingskipper",
   "manifest_version": 3,
   "background": {
@@ -29,7 +28,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.netflix.com/*", "https://www.primevideo.com/*", "https://www.disneyplus.com/*"],
-      "js": ["src/content_scripts/skipper.js"],
+      "js": ["dist/skipper.js"],
       "run_at": "document_end"
     }
   ]
