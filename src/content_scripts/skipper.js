@@ -48,7 +48,15 @@ async function startup () {
     checkJob()
 }
 
-function checkJob () {
+function sleep(ms) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve()
+        }, ms)
+    })
+}
+
+/*function checkJob () {
 
     const should_skip = c_skippers.filter(a => a.enabled).length > 0
 
@@ -57,15 +65,18 @@ function checkJob () {
             const enabled_skippers = c_skippers.filter(a => a.enabled)
 
             for (let i = 0; i < enabled_skippers.length; i++) {
-                console.log(enabled_skippers[i])
+
                 let skip_elements = document.querySelectorAll(enabled_skippers[i].selectors.join(','))
+                
                 
                 skip_elements.forEach((e) => {
                     try {
+                        console.log('clicking on', e)
                         e.click()
                     } catch (e) {
                         console.error(e)
-                    }})
+                    }
+                })
 
             }
         }, 800) : interval_id
@@ -73,6 +84,35 @@ function checkJob () {
     else {
         clearInterval(interval_id)
         interval_id = null
+    }
+}*/
+
+async function checkJob () {
+
+    const should_skip = c_skippers.filter(a => a.enabled).length > 0
+
+    if (should_skip) {
+        const enabled_skippers = c_skippers.filter(a => a.enabled)
+
+        for (let i = 0; i < enabled_skippers.length; i++) {
+
+            let skip_elements = document.querySelectorAll(enabled_skippers[i].selectors.join(','))
+            if (skip_elements.length && enabled_skippers[i].name === 'primevideo_skip_ad')
+                await sleep(2500)
+            
+            skip_elements.forEach((e) => {
+                try {
+                    console.log('clicking on', e)
+                    e.click()
+                } catch (e) {
+                    console.error(e)
+                }
+            })
+
+        }
+        setTimeout(() => {
+            checkJob()
+        }, 800);
     }
 }
 
