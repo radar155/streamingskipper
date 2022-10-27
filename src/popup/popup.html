@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="popup.css">
-  </head>
-  <body>
-    <div id="background">
-      <p class="service"><strong>Netflix</strong></p><br>
-      <p>Skip Intro</p>
-      <label class="switch">
-        <input type="checkbox" name="netflix" id="netflix_skip_intro"></input>
-        <span class="slider netflix"></span>
-      </label><br>
-      <p>Skip Recap</p>
-      <label class="switch">
-        <input type="checkbox" name="netflix" id="netflix_skip_recap"></input>
-        <span class="slider netflix"></span>
-      </label>
-      <p>Skip To Next Episode</p>
-      <label class="switch">
-        <input type="checkbox" name="netflix" id="netflix_skip_next_episode"></input>
-        <span class="slider netflix"></span>
-      </label>
-      <hr>
-      <p class="service"><strong>Prime Video</strong></p><br>
-      <p>Skip Intro & Recap</p>
-      <label class="switch">
-        <input type="checkbox" name="primevideo" id="primevideo_skip_intro_&_recap"></input>
-        <span class="slider primevideo"></span>
-      </label><br>
-      <p>Skip To Next Episode</p>
-      <label class="switch">
-        <input type="checkbox" name="primevideo" id="primevideo_skip_next_episode"></input>
-        <span class="slider primevideo"></span>
-      </label>
-      <br>
-      <p>Skip Ad</p>
-      <sup><p id="beta">BETA</p></sup>
-      <label class="switch">
-        <input type="checkbox" name="primevideo" id="primevideo_skip_ad"></input>
-        <span class="slider primevideo"></span>
-      </label>
-     <hr>
-     <p class="service"><strong>Disney+</strong></p><br>
-     <p>Skip Intro & Recap</p>
-     <label class="switch">
-       <input type="checkbox" name="disneyplus" id="disneyplus_skip_intro_&_recap"></input>
-       <span class="slider disneyplus"></span>
-     </label><br>
-     <p>Skip To Next Episode</p>
-     <label class="switch">
-       <input type="checkbox" name="disneyplus" id="disneyplus_skip_next_episode"></input>
-       <span class="slider disneyplus"></span>
-     </label>
+
+<head>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div id="background">
+    <p class="service"><strong>Netflix</strong></p><br>
+    <p>Skip Intro</p>
+    <label class="switch">
+      <input type="checkbox" name="netflix" id="netflix_skip_intro"></input>
+      <span class="slider netflix"></span>
+    </label><br>
+    <p>Skip Recap</p>
+    <label class="switch">
+      <input type="checkbox" name="netflix" id="netflix_skip_recap"></input>
+      <span class="slider netflix"></span>
+    </label>
+    <p>Skip To Next Episode</p>
+    <label class="switch">
+      <input type="checkbox" name="netflix" id="netflix_skip_next_episode"></input>
+      <span class="slider netflix"></span>
+    </label>
     <hr>
-     <a class="version" href="https://github.com/radar155/streamingskipper" target="_blank" rel="noopener noreferrer">v. <span id="version"></span></a>
-    </div>
-    <script type="module" src="popup.js"></script>
-  </body>
+    <p class="service"><strong>Prime Video</strong></p><br>
+    <p>Skip Intro & Recap</p>
+    <label class="switch">
+      <input type="checkbox" name="primevideo" id="primevideo_skip_intro_&_recap"></input>
+      <span class="slider primevideo"></span>
+    </label><br>
+    <p>Skip To Next Episode</p>
+    <label class="switch">
+      <input type="checkbox" name="primevideo" id="primevideo_skip_next_episode"></input>
+      <span class="slider primevideo"></span>
+    </label>
+    <br>
+    <p>Skip Ad</p>
+    <sup>
+      <p id="beta">BETA</p>
+    </sup>
+    <label class="switch">
+      <input type="checkbox" name="primevideo" id="primevideo_skip_ad"></input>
+      <span class="slider primevideo"></span>
+    </label>
+    <hr>
+    <p class="service"><strong>Disney+</strong></p><br>
+    <p>Skip Intro & Recap</p>
+    <label class="switch">
+      <input type="checkbox" name="disneyplus" id="disneyplus_skip_intro_&_recap"></input>
+      <span class="slider disneyplus"></span>
+    </label><br>
+    <p>Skip To Next Episode</p>
+    <label class="switch">
+      <input type="checkbox" name="disneyplus" id="disneyplus_skip_next_episode"></input>
+      <span class="slider disneyplus"></span>
+    </label>
+    <hr>
+    <a class="version" href="https://github.com/radar155/streamingskipper" target="_blank"
+      rel="noopener noreferrer"><img id="gitLogo" src="github_icon.png" alt="git_logo">v. <span id="version"></span></a>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+
 </html>

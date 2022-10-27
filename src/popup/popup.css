@@ -103,3 +103,8 @@ input:checked + .slider:before {
   float: right;
   color: rgb(122,130,160);
 }
+
+#gitLogo {
+  width: 16px;
+  height: 16px;
+}
