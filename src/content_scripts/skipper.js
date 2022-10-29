@@ -1,6 +1,7 @@
 import { skippers } from '../config.js'
 
 let service
+let checking = true
 
 switch (window.location.host) {
     case 'www.netflix.com':
@@ -41,11 +42,12 @@ async function startup () {
             if (skipper)
                 skipper.enabled = newValue
 
-            checkJob()
+            if (!checking)
+                check()
         }
     })
 
-    checkJob()
+    check()
 }
 
 function sleep(ms) {
@@ -56,41 +58,11 @@ function sleep(ms) {
     })
 }
 
-/*function checkJob () {
+async function check () {
+    checking = true
 
     const should_skip = c_skippers.filter(a => a.enabled).length > 0
-
-    if (should_skip)
-        interval_id = interval_id === null ? setInterval(() => {
-            const enabled_skippers = c_skippers.filter(a => a.enabled)
-
-            for (let i = 0; i < enabled_skippers.length; i++) {
-
-                let skip_elements = document.querySelectorAll(enabled_skippers[i].selectors.join(','))
-                
-                
-                skip_elements.forEach((e) => {
-                    try {
-                        console.log('clicking on', e)
-                        e.click()
-                    } catch (e) {
-                        console.error(e)
-                    }
-                })
-
-            }
-        }, 800) : interval_id
-
-    else {
-        clearInterval(interval_id)
-        interval_id = null
-    }
-}*/
-
-async function checkJob () {
-
-    const should_skip = c_skippers.filter(a => a.enabled).length > 0
-
+    console.log('check')
     if (should_skip) {
         const enabled_skippers = c_skippers.filter(a => a.enabled)
 
@@ -111,9 +83,11 @@ async function checkJob () {
 
         }
         setTimeout(() => {
-            checkJob()
+            check()
         }, 800);
-    }
+    } else
+        checking = false
+
 }
 
 startup()
