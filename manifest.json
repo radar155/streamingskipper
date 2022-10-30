@@ -1,6 +1,6 @@
 {
-  "name": "Streaming Skipper",
-  "description": "Easily configurable auto skip intro, recap, ads on video streaming services. Supports Netflix, PrimeVideo, Disney+.",
+  "name": "AIO Skipper",
+  "description": "Auto skip intro, recap, ads on video streaming services. Supports Netflix, PrimeVideo, Disney+.",
   "version": "0.0.1",
   "homepage_url": "https://github.com/radar155/streamingskipper",
   "manifest_version": 3,
