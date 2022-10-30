@@ -11,20 +11,20 @@ AIO Skipper is and will always be free. AIO Skipper is not using any kind of Ana
 
 
 ## Supported Services
-:white_check_mark: Netflix (Intro - Recaps - Jump to next episode)
-:white_check_mark: Amazon Prime Video (Ads - Intro - Recaps - Jump to next episode)
-:white_check_mark: Disney+ (Intro - Recaps - Jump to next episode)
-:black_square_button: HBOMax
+:white_check_mark: Netflix (Intro - Recaps - Jump to next episode)  
+:white_check_mark: Amazon Prime Video (Ads - Intro - Recaps - Jump to next episode)  
+:white_check_mark: Disney+ (Intro - Recaps - Jump to next episode)  
+:black_square_button: HBOMax  
 
 Please, open an Issue to ask support for a service, feature or for a specific skipper.
 
 ## Supported Browsers
 
-:white_check_mark: Chrome (and Chromium)
-:white_check_mark: Microsoft Edge
-:white_check_mark: Brave
-:white_check_mark: Opera
-:black_square_button: Firefox (waiting for manifest v3 support)
+:white_check_mark: Chrome (and Chromium)  
+:white_check_mark: Microsoft Edge  
+:white_check_mark: Brave  
+:white_check_mark: Opera  
+:black_square_button: Firefox (waiting for manifest v3 support)  
 
 
 ## Todo
