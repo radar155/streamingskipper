@@ -33,8 +33,11 @@ Please, open an Issue to ask support for a service, feature or for a specific sk
  - [ ] Add support for Firefox
  - [ ] Collect feedbacks for PrimeVideo Ads skipper, still in BETA
  - [ ] Switch to Typescript
+ - [ ] Improve `popup.html/popup.js` to generate HTML by reading `config.js`
+ - [ ] Switch to [MutationObserver Api](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
+
 
 ## Contribute
 Feel free to open an issue, fork or send a PR.  
-To load the unpacked version of this extension, you need to run `npm run build`before.  
+To load the unpacked version of this extension, you need to run `npm run build` before.  
 This is because the `content_script` is an ESModule, and this is not still supported without inconvenient tricks.
