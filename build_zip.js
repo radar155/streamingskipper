@@ -52,6 +52,6 @@ archive.directory('src/popup', 'src/popup')
 archive.file('src/background.js', { name: 'src/background.js' })
 archive.file('src/config.js', { name: 'src/config.js' })
 
-archive.file('dist/skipper.js', { name: 'src/content_scripts/skipper.js' })
+archive.file('dist/skipper.js', { name: 'dist/skipper.js' })
 
 archive.finalize();
