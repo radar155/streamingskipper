@@ -1,4 +1,12 @@
-export const skippers = [
+export interface Skipper {
+    service: string,
+    name: string,
+    ui: string,
+    selectors: string[],
+    beta? : boolean
+}
+
+export const skippers : Skipper[] = [
     {   
         service: 'NETFLIX',
         name: 'netflix_skip_intro',

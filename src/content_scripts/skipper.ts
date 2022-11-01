@@ -1,7 +1,7 @@
-import { skippers } from '../config.js'
+import { skippers, Skipper } from '../config.js'
 
-let service
-let checking = true
+let service: string
+let checking: boolean = true
 
 switch (window.location.host) {
     case 'www.netflix.com':
@@ -15,7 +15,11 @@ switch (window.location.host) {
         break
 }
 
-const c_skippers = skippers
+interface CSkipper extends Skipper {
+    enabled: boolean
+}
+
+const c_skippers: CSkipper[] = skippers
     .filter(e => e.service === service)
     .map(e => {
     return {
@@ -23,8 +27,6 @@ const c_skippers = skippers
         enabled: false
     }
 })
-
-let interval_id = null
 
 async function startup () {
 
@@ -50,7 +52,7 @@ async function startup () {
     check()
 }
 
-function sleep(ms) {
+function sleep(ms: number): Promise<void> {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve()
@@ -58,7 +60,7 @@ function sleep(ms) {
     })
 }
 
-async function check () {
+async function check (): Promise<void> {
     checking = true
 
     const should_skip = c_skippers.filter(a => a.enabled).length > 0
@@ -68,7 +70,7 @@ async function check () {
 
         for (let i = 0; i < enabled_skippers.length; i++) {
 
-            let skip_elements = document.querySelectorAll(enabled_skippers[i].selectors.join(','))
+            let skip_elements = document.querySelectorAll(enabled_skippers[i].selectors.join(',')) as NodeListOf<HTMLElement>
             if (skip_elements.length && enabled_skippers[i].name === 'primevideo_skip_ad')
                 await sleep(2500)
             

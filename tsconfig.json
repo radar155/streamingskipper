@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "module": "es2020",
+        "target": "ES2017",
+        "esModuleInterop": true,
+        "sourceMap": false,
+        "rootDir": "src",
+        "outDir": "dist-ts",
+        "noEmitOnError": false,
+        "typeRoots": [ "node_modules/@types" ]
+    }
+}

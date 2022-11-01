@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(32,33,36); 
+}
+
+#background {
+  width:210px;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+    color:white;
+    display:inline-block;
+    font-size:14px;
+}
+hr {
+    border: 1px solid rgb(48,52,67);
+    width: 90%;
+}
+.service {
+    color: white;
+    font-size: 15px;
+    margin: 1.5vh 0 0;
+    text-align: center;
+}
+
+.switch {
+    position: relative;
+    float: right;
+    width: 50px;
+    height: 22px;
+    top: 1px;
+    margin-block-start: 1em;
+}
+
+.switch input { 
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(53,54,58);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.selector {
+  height: 40px;
+}
+
+input:checked + .primevideo{
+  background-color: #0f79af;
+}
+
+input:focus + .primevideo {
+  box-shadow: 0 0 1px #0f79af;
+}
+
+input:checked + .disneyplus{
+  background-color: #0063e5;
+}
+
+input:focus + .disneyplus {
+  box-shadow: 0 0 1px #0063e5;
+}
+
+input:checked + .netflix{
+  background-color: #E50914;
+}
+  
+input:focus + .netflix {
+  box-shadow: 0 0 1px #E50914;
+}
+  
+input:checked + .slider:before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+#beta {
+  color:rgb(122,130,160);
+  font-size: 11px;
+}
+
+.version {
+  font-size: 12px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  color: rgb(122,130,160);
+  text-decoration: underline;
+}
+
+.gitlink {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#gitLogo {
+  width: 16px;
+  height: 16px;
+}

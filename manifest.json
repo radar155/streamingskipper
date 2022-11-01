@@ -5,30 +5,30 @@
   "homepage_url": "https://github.com/radar155/streamingskipper",
   "manifest_version": 3,
   "background": {
-    "service_worker": "src/background.js",
+    "service_worker": "dist-ts/background.js",
     "type": "module"
   },
   "minimum_chrome_version": "92",
   "permissions": ["storage"],
   "action": {
-    "default_popup": "src/popup/popup.html",
+    "default_popup": "dist-ts/popup/popup.html",
     "default_icon": {
-      "16": "src/icons/16x16.png",
-      "32": "src/icons/32x32.png",
-      "48": "src/icons/48x48.png",
-      "128": "src/icons/128x128.png"
+      "16": "dist-ts/icons/16x16.png",
+      "32": "dist-ts/icons/32x32.png",
+      "48": "dist-ts/icons/48x48.png",
+      "128": "dist-ts/icons/128x128.png"
     }
   },
   "icons": {
-    "16": "src/icons/16x16.png",
-    "32": "src/icons/32x32.png",
-    "48": "src/icons/48x48.png",
-    "128": "src/icons/128x128.png"
+    "16": "dist-ts/icons/16x16.png",
+    "32": "dist-ts/icons/32x32.png",
+    "48": "dist-ts/icons/48x48.png",
+    "128": "dist-ts/icons/128x128.png"
   },
   "content_scripts": [
     {
       "matches": ["https://www.netflix.com/*", "https://www.primevideo.com/*", "https://www.disneyplus.com/*"],
-      "js": ["dist/skipper.js"],
+      "js": ["dist-ts/content_scripts/skipper.js"],
       "run_at": "document_end"
     }
   ]
