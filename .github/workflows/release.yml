@@ -18,9 +18,9 @@ jobs:
     - run: npm run zip --if-present
     - name: Upload zip to github artifacts
       uses: actions/upload-artifact@v3
-        with:
-          name: zip
-          path: "*.zip"
+      with:
+        name: zip
+        path: "*.zip"
 
   release:
     runs-on: ubuntu-latest
@@ -29,8 +29,8 @@ jobs:
       with:
         name: zip
     - uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          files: |
-            *.zip
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        files: |
+          *.zip
