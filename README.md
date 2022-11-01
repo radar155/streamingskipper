@@ -35,7 +35,7 @@ The extension verify periodically for the presence of HTMLElements using a given
  - [ ] Add support for Firefox
  - [ ] Collect feedbacks for PrimeVideo Ads skipper, still in BETA
  - [ ] Switch to Typescript
- - [ ] Improve `popup.html/popup.js` to generate HTML by reading `config.js`
+ - [x] Improve `popup.html/popup.js` to generate HTML by reading `config.js`
  - [ ] Switch to [MutationObserver Api](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
 
 
