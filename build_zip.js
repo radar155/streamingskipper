@@ -1,6 +1,6 @@
 const fs = require('fs');
 const archiver = require('archiver');
-const version = require('./package.json').version
+const version = require('./manifest.json').version
 const output_path = `${__dirname}/AIOSkipper.v${version}.zip`
 
 try {
