@@ -29,11 +29,11 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: zip
-    - run: v=$(sed 's/.*v\(.*\).zip.*/\1/' <<< $(ls *.zip))
+    - run: echo "V=$(sed 's/.*v\(.*\).zip.*/\1/' <<< $(ls *.zip))" >> $GITHUB_ENV 
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: $v
+        automatic_release_tag: ${{ env.V }}
         prerelease: false
         files: |
           *.zip
