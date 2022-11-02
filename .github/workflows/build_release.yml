@@ -29,9 +29,12 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: zip
+    - run: t=$(ls *.zip)
+    - run: v=$(grep -oP '(?<=v).*?(?=.zip)' <<< "$t")
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "${{ v }}"
         prerelease: false
         files: |
           *.zip
